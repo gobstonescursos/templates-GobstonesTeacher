@@ -41,6 +41,7 @@ procedure MoverAlienAlEste() {
 // El atributo "tooltip" permite indicar una ayuda que se observará al 
 // ubicar el mouse sobre el bloque.
 /*@ATTRIBUTE@tooltip@Cuando el Alien está cerca del botón, presiona el botón@*/
+// AGREGAR ATRIBUTO block_icon
 procedure TocarBotón() {
     AuxVerificarSiHayAlien()
     AuxVerificarSiHayBotón()

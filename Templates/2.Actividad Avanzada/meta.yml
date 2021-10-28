@@ -32,7 +32,7 @@ blocks:
     - MisProcedimientos
 activity:
   type: Con dominio
-  toolbox: Media
+  toolbox: Inicial
   creation_mode: basic
   construction_mode: blocks
   execution_type: sequential

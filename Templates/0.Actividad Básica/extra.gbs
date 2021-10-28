@@ -28,3 +28,9 @@ procedure MoverAlienAlEste() {
 procedure TocarBotón() {
     Sacar(Rojo)
 }
+
+
+
+
+
+

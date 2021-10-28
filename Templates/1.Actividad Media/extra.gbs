@@ -76,3 +76,10 @@ function aux_hayBotónSinApretar() {
 function aux_hayBotónApretado() {
     return(nroBolitas(Rojo) == 1)
 }
+
+
+
+
+
+
+

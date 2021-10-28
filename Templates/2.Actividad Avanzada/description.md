@@ -4,9 +4,7 @@ Enunciado de la actividad en formato [Markdown][Markdown].
 Por ejemplo: "Armá un programa que te permita lograr que el Alien toque el botón.
 Para eso, investigá las primitivas disponibles, y la forma en que podés lograr que el Alien haga lo que indica el programa."
 
-Esta actividad se configuró como de complejidad avanzada, por lo que la caja de herramientas tendrá muchísimas más 
-opciones de las necesarias. Sin embargo, la idea de "actividad avanzada" en el caso de este template indica que
-se describen muchas opciones en los datos provistos como ejemplo.
+Esta actividad se denomina "avanzada" para indicar que en este template se describen muchas opciones en los datos provistos como ejemplo. No está relacionado con la opción de "Herramientas disponibles" también llamada "Avanzada".
 
 ## Tablero esperado
 
@@ -37,6 +35,10 @@ En los enunciados de una actividad se pueden armar pequeños tableros de muestra
 También se pueden poner imágenes, tanto en forma de link a un archivo público en la web, como en formato "BASE64".
 
 **_COMPLETAR_**
+
+Y la frutilla es que se pueden agregar links a una imagen, para lograr incluir videos.
+
+[![Pequeña animación del Alien](https://i9.ytimg.com/vi/bSXgkhdRHLc/mq2.jpg?sqp=CJzZ7IsG&rs=AOn4CLBof0ZZcNOyCfVW6-dpdY3jkqvcCg)](https://youtu.be/bSXgkhdRHLc "Alien Animado")
 
 ## Cierre
 

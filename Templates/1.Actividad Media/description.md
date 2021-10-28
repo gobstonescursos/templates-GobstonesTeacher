@@ -4,9 +4,7 @@ Enunciado de la actividad en formato [Markdown][Markdown].
 Por ejemplo: "Armá un programa que te permita lograr que el Alien toque el botón.
 Para eso, investigá las primitivas disponibles, y la forma en que podés lograr que el Alien haga lo que indica el programa."
 
-Esta actividad se configuró como de complejidad media, por lo que la caja de herramientas tendrá muchas más 
-opciones de las necesarias. Sin embargo, la idea de "actividad media" en el caso de este template indica que
-se describen más opciones en los datos provistos como ejemplo.
+Esta actividad se denomina "media" para indicar que en este template se describen varias opciones en los datos provistos como ejemplo. No está relacionado con la opción de "Herramientas disponibles" también llamada "Media".
 
 ## Tablero esperado
 
