@@ -1,0 +1,12 @@
+[
+  { "name": "Templates", "repo": "gobstonescursos/templates-GobstonesTeacher"
+  , "exercises": 
+    [ { "id": "00", "name": "0.Actividad Básica"
+      , "path": "Templates/0.Actividad Básica"
+      }
+    ]
+  }
+]
+
+  
+
