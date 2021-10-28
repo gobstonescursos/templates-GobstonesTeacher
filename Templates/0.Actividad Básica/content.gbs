@@ -1,15 +1,5 @@
 /* Acá va el contenido que vé inicialmente el estudiante cuando carga la actividad en GobstonesSr.
-   En este caso va a ver un programa incompleto, y un procedimiento incompleto.
-   Los tres puntos (...) en Gobstones se utilizan para un comando o una expresión que debe completarse
-   (similar a los bloques "Completar Comando" y "Completar Expresión" en la caja de herramientas 
-   de GobstonesTeacher o GobstonesJr en modo libre).
+   En este caso va a ver un programa vacío.
 */   
-procedure MoverAlAlienHastaElBotón() {
-  ...
-}
-
-
 program {
-  MoverAlAlienHastaElBotón()
-  ...
 }

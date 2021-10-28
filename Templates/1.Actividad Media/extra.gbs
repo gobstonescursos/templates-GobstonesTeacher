@@ -1,0 +1,69 @@
+/*
+   En el archivo extra.gbs se coloca el código que implementa las primitivas a utilizar en la actividad,
+   más las operaciones auxiliares necesarias para desarrollarlas.
+
+   En GobstonesJr, cada procedimiento que no empiece con el nombre Aux va a aparecer en la caja de herramientas, 
+   en la categoría "Procedimientos primitivos". Y cada función que no empiece con el nombre aux va a aparecer 
+   en la caja de herramientas, en la categoría "Funciones primitivas". 
+   En GobstonesSr, cada una de esas operaciones se puede utilizar como procedimiento o función en el código 
+   del estudiante, utilizando el identificador en texto.
+
+   En cambio las operaciones que empiezan con Aux o aux NO están disponibles en la caja de herramientas
+   en GobstonesJr. 
+   En este ejemplo se definen 2 procedimientos auxiliares y 3 funciones auxiliares, para verificar que
+   los elementos están ahí. Esto sirve para poder controlar el mensaje de error (para lo que se usa el
+   comando primitivo  BOOM).
+*/
+
+// Los atributos permiten modificar alguna de las características de la operación.
+// En este caso, el atributo "block_name" permite modificar el nombre estándar asignado
+// automáticamente en base al nombre del procedimiento (que en este caso sería "Mover alien al este",
+// con todas minúsculas).
+/*@ATTRIBUTE@block_name@Mover Alien al Este@*/
+/*@ATTRIBUTE@block_tooltip@Mueve al Alien un lugar hacia el Este@*/
+procedure MoverAlienAlEste() {
+    AuxVerificarSiHayAlien()
+    Sacar(Verde)
+    Mover(Este)
+    Poner(Verde)
+}
+
+// En Gobstones los identificadores pueden llevar acentos y eñes.
+// El atributo "block_tooltip" permite indicar una ayuda que se observará al ubicar el mouse sobre el bloque.
+/*@ATTRIBUTE@block_tooltip@Cuando el Alien está cerca del botón, presiona el botón@*/
+procedure TocarBotón() {
+    AuxVerificarSiHayAlien()
+    AuxVerificarSiHayBotón()
+    AuxVerificarSiHayBotónSinApretar()
+    Sacar(Rojo)
+}
+
+// Las operaciones que empiezan con Aux o aux NO aparecen en la caja de herramientas.
+// Son auxiliares para las operaciones principales.
+procedure AuxVerificarSiHayAlien() {
+    if (not aux_hayAlien()) { BOOM("No está el Alien acá para darle instrucciones") }
+}
+
+procedure AuxVerificarSiHayBotón() {
+    if (not aux_hayBotón()) { BOOM("El Alien no está suficientemente cerca del botón") }
+}
+
+procedure AuxVerificarSiHayBotónSinApretar() {
+    if (not aux_hayBotónSinApretar()) { BOOM("El botón ya fue apretado") }
+}
+
+function aux_hayAlien() {
+    return(nroBolitas(Verde) == 1)
+}
+
+function aux_hayBotón() {
+    return(aux_hayBotónSinApretar() || aux_hayBotónApretado())
+}
+
+function aux_hayBotónSinApretar() {
+    return(nroBolitas(Rojo) == 2)
+}
+
+function aux_hayBotónApretado() {
+    return(nroBolitas(Rojo) == 1)
+}
