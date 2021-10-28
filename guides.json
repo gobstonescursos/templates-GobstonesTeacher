@@ -4,6 +4,12 @@
     [ { "id": "00", "name": "0.Actividad Básica"
       , "path": "Templates/0.Actividad Básica"
       }
+    , { "id": "01", "name": "1.Actividad Media"
+      , "path": "Templates/1.Actividad Media"
+      }
+    , { "id": "02", "name": "2.Actividad Avanzada"
+      , "path": "Templates/2.Actividad Avanzada"
+      }
     ]
   }
 ]
