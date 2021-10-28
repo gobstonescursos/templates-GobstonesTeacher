@@ -1,18 +1,22 @@
 /*
-   En el archivo extra.gbs se coloca el código que implementa las primitivas a utilizar en la actividad,
-   más las operaciones auxiliares necesarias para desarrollarlas.
+   En el archivo extra.gbs se coloca el código que implementa las primitivas a 
+   utilizar en la actividad, más las operaciones auxiliares necesarias para 
+   desarrollarlas.
 
-   En GobstonesJr, cada procedimiento que no empiece con el nombre Aux va a aparecer en la caja de herramientas, 
-   en la categoría "Procedimientos primitivos". Y cada función que no empiece con el nombre aux va a aparecer 
+   En GobstonesJr, cada procedimiento que no empiece con el nombre Aux va a 
+   aparecer en la caja de herramientas, en la categoría "Procedimientos 
+   primitivos". Y cada función que no empiece con el nombre aux va a aparecer 
    en la caja de herramientas, en la categoría "Funciones primitivas". 
-   En GobstonesSr, cada una de esas operaciones se puede utilizar como procedimiento o función en el código 
-   del estudiante, utilizando el identificador en texto.
+   En GobstonesSr, cada una de esas operaciones se puede utilizar como 
+   procedimiento o función en el código del estudiante, utilizando el 
+   identificador en texto.
 */
 
-// Los atributos permiten modificar alguna de las características de la operación.
-// En este caso, el atributo "block_name" permite modificar el nombre estándar asignado
-// automáticamente en base al nombre del procedimiento (que en este caso sería "Mover alien al este",
-// con todas minúsculas).
+// Los atributos permiten modificar alguna de las características de la 
+// operación.
+// El atributo "block_name" permite modificar el nombre estándar asignado 
+// automáticamente en base al nombre del procedimiento (que en este ejemplo
+// sería "Mover alien al este", con todas minúsculas).
 /*@ATTRIBUTE@block_name@Mover Alien al Este@*/
 procedure MoverAlienAlEste() {
     Sacar(Verde)
