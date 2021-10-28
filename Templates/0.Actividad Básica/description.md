@@ -20,7 +20,7 @@ En los enunciados de una actividad se pueden armar pequeños tableros de muestra
 
 ### Sin vestimenta
 <center>
-  <gs-board attire-src="Alien">
+  <gs-board>
     GBB/1.0
     size 4 1
     cell 3 0 Rojo 1 Verde 1
