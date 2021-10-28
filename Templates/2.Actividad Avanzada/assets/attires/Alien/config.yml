@@ -1,0 +1,55 @@
+# La configuración de las vestimentas se da mediante un archivo "config.yml".
+# Este archivo tiene 2 campos, "name" y "rules".
+# El campo "name" es un String con el nombre de la vestimenta (usado en el selector).
+# El campo "rules" es una lista de opciones, donde cada opción tiene, al menos, los campos
+# "when" e "image", o "when" y "text".
+# A su vez el campo "when" contiene cuatro subcampos, "red", "green", "blue" y "black",
+# cuyos valores pueden ser números enteros positivos, o bien uno de los Strings '*' o '+'
+# para indicar "cero o más" y "uno o más", respectivamente.
+# El campo "image" debe ser un String que contenga el nombre completo de una imagen ".png",
+# ".jpg" o ".bmp", que se encuentre en la misma carpeta de la vestimenta.
+# Si cualquiera de las condiciones no se respeta, la vestimenta no se cargará.
+name: Alien
+rules:
+  - when:
+      red: 2
+      green: 2
+      blue: '*'
+      black: '*'
+    image: AlienYBoton.png
+    text: null
+  - when:
+      red: 1
+      green: 2
+      blue: '*'
+      black: '*'
+    image: AlienYBotonApretado.png
+    text: null
+  - when:
+      red: '*'
+      green: 2
+      blue: '*'
+      black: '*'
+    image: AlienSolo.png
+    text: null
+  - when:
+      red: '*'
+      green: 1
+      blue: '*'
+      black: '*'
+    image: AlienSoloCaminando.png
+    text: null
+  - when:
+      red: 2
+      green: '*'
+      blue: '*'
+      black: '*'
+    image: BotonSolo.png
+    text: null
+  - when:
+      red: '*'
+      green: '*'
+      blue: '*'
+      black: '*'
+    image: Fondo.png
+    text: null

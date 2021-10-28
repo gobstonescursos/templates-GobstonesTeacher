@@ -1,0 +1,107 @@
+/*
+   En el archivo extra.gbs se coloca el código que implementa las primitivas a 
+   utilizar en la actividad, más las operaciones auxiliares necesarias para 
+   desarrollarlas.
+
+   En GobstonesJr, cada procedimiento que no empiece con el nombre Aux va a 
+   aparecer en la caja de herramientas, en la categoría "Procedimientos 
+   primitivos". Y cada función que no empiece con el nombre aux va a aparecer 
+   en la caja de herramientas, en la categoría "Funciones primitivas". 
+   En GobstonesSr, cada una de esas operaciones se puede utilizar como 
+   procedimiento o función en el código del estudiante, utilizando el 
+   identificador en texto.
+
+   En cambio las operaciones que empiezan con Aux o aux NO están disponibles 
+   en la caja de herramientas en GobstonesJr. 
+   En este ejemplo se definen 2 procedimientos auxiliares y 3 funciones 
+   auxiliares, para verificar que los elementos están ahí. Esto sirve para 
+   poder controlar el mensaje de error (para lo que se usa el comando 
+   primitivo BOOM).
+*/
+
+// Los atributos permiten modificar alguna de las características de la 
+// operación.
+// El atributo "block_name" permite modificar el nombre estándar asignado
+// automáticamente en base al nombre del procedimiento (que en este ejemplo 
+// sería "Mover alien al este", con todas minúsculas).
+/*@ATTRIBUTE@block_name@Mover Alien al Este@*/
+/*@ATTRIBUTE@tooltip@Mueve al Alien un lugar hacia el Este@*/
+/*@ATTRIBUTE@nonatomic@*/
+procedure MoverAlienAlEste() {
+    AuxVerificarSiHayAlien()
+    AuxAvanzarAlien()         
+    AuxSacarAlienYMoverEsteYPonerAlien() 
+    // Se hace de esta forma para poder ver una breve "animación" del
+    // alien caminando.
+    // Depende de la representación, la vestimenta, y el atributo 
+    // "nonatomic"
+}
+
+// En Gobstones los identificadores pueden llevar acentos y eñes.
+// El atributo "tooltip" permite indicar una ayuda que se observará al 
+// ubicar el mouse sobre el bloque.
+/*@ATTRIBUTE@tooltip@Cuando el Alien está cerca del botón, presiona el botón@*/
+procedure TocarBotón() {
+    AuxVerificarSiHayAlien()
+    AuxVerificarSiHayBotón()
+    AuxVerificarSiHayBotónSinApretar()
+    Sacar(Rojo)
+}
+
+// Las operaciones que empiezan con Aux o aux NO aparecen en la caja de 
+// herramientas. Son auxiliares para las operaciones principales.
+procedure AuxVerificarSiHayAlien() {
+    if (not aux_hayAlien()) 
+      { BOOM("No está el Alien acá para darle instrucciones") }
+}
+
+procedure AuxVerificarSiHayBotón() {
+    if (not aux_hayBotón()) 
+      { BOOM("El Alien no está suficientemente cerca del botón") }
+}
+
+procedure AuxVerificarSiHayBotónSinApretar() {
+    if (not aux_hayBotónSinApretar()) 
+      { BOOM("El botón ya fue apretado") }
+}
+
+function aux_hayAlien() {
+    return(nroBolitas(Verde) == 2)
+}
+
+function aux_hayBotón() {
+    return(aux_hayBotónSinApretar() || aux_hayBotónApretado())
+}
+
+function aux_hayBotónSinApretar() {
+    return(nroBolitas(Rojo) == 2)
+}
+
+function aux_hayBotónApretado() {
+    return(nroBolitas(Rojo) == 1)
+}
+
+// Operaciones para representar al Alien
+
+// PRECONDICIÓN: está el Alien completo
+procedure AuxAvanzarAlien()         
+  { Sacar(Verde)              } 
+  
+// PRECONDICIÓN: está el Alien caminando, y hay lugar al este
+procedure AuxSacarAlienYMoverEsteYPonerAlien() 
+  { Sacar(Verde) Mover(Este) AuxPonerAlien() }
+
+// PRECONDICIÓN: no está el Alien
+procedure AuxPonerAlien()           
+  { Poner(Verde) Poner(Verde) }
+
+
+
+
+
+
+
+
+
+
+
