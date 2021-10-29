@@ -2,7 +2,7 @@ library:
   visible: false
 source:
   visible: true
-  percentage: 0.68
+  percentage: 0.6799977022058824
 board:
   visible_edition: true
   collapse_toolbox: false
@@ -36,4 +36,4 @@ activity:
   creation_mode: basic
   construction_mode: blocks
   execution_type: sequential
-name: Template de Actividad Media
+name: Template de Actividad Avanzada
