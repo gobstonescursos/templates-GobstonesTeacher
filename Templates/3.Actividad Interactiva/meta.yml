@@ -2,7 +2,7 @@ library:
   visible: false
 source:
   visible: true
-  percentage: 0.6799977022058824
+  percentage: 0.6799967288970947
 board:
   visible_edition: true
   collapse_toolbox: false
@@ -25,11 +25,6 @@ attire:
   active: Alien
 initialDescription: true
 link: ''
-blocks:
-  visible:
-    - DefinicionDeProcedimientoSimple
-    - ProcedimientosPrimitivos
-    - MisProcedimientos
 activity:
   type: Con dominio
   toolbox: Avanzada
