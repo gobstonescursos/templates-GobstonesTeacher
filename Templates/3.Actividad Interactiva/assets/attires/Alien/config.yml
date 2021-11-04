@@ -47,6 +47,13 @@ rules:
     image: BotonSolo.png
     text: null
   - when:
+      red: 1
+      green: '*'
+      blue: '*'
+      black: '*'
+    image: BotonApretado.png
+    text: null
+  - when:
       red: '*'
       green: '*'
       blue: '*'

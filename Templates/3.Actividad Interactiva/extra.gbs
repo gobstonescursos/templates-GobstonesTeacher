@@ -58,8 +58,10 @@ procedure MoverAlienAlOeste() {
 procedure TocarBotón() {
     AuxVerificarSiHayAlien()
     AuxVerificarSiHayBotón()
-    AuxVerificarSiHayBotónSinApretar()
-    AuxTocarBotón()
+    if (aux_hayBotónSinApretar())
+         { AuxCambiarBotónAOn()  }
+    else { AuxCambiarBotónAOff() }
+    }
 }
 
 // Las funciones sirven para expresar información más compleja que los datos primitivos.
@@ -97,11 +99,6 @@ procedure AuxVerificarSiHayAlien() {
 procedure AuxVerificarSiHayBotón() {
     if (not aux_hayBotón()) 
       { BOOM("El Alien no está suficientemente cerca del botón") }
-}
-
-procedure AuxVerificarSiHayBotónSinApretar() {
-    if (not aux_hayBotónSinApretar()) 
-      { BOOM("El botón ya fue apretado") }
 }
 
 function aux_hayAlien() {
@@ -147,9 +144,12 @@ procedure AuxCompletarPonerAlien()
   { Poner(Verde) }
 
 // PRECONDICIÓN: está el Botón
-procedure AuxTocarBotón() 
+procedure AuxCambiarBotónAOff() 
   { Sacar(Rojo) }
 
+// PRECONDICIÓN: está el Botón
+procedure AuxCambiarBotónAOn() 
+  { Poner(Rojo) }
 
 function aux_hayBotónAcá() 
   { return(nroBolitas(Rojo) == 2) }
