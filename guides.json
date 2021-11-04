@@ -10,6 +10,9 @@
     , { "id": "02", "name": "2.Actividad Avanzada"
       , "path": "Templates/2.Actividad Avanzada"
       }
+    , { "id": "03", "name": "3.Actividad Interactiva"
+      , "path": "Templates/3.Actividad Interactiva"
+      }
     ]
   }
 ]
