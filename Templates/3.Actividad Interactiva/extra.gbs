@@ -59,16 +59,16 @@ procedure TocarBotón() {
     AuxVerificarSiHayAlien()
     AuxVerificarSiHayBotón()
     if (aux_hayBotónSinApretar())
-         { AuxCambiarBotónAOn()  }
-    else { AuxCambiarBotónAOff() }
-    }
+         { AuxCambiarBotónAOff() }
+    else { AuxCambiarBotónAOn()  }
 }
 
 // Las funciones sirven para expresar información más compleja que los datos primitivos.
 // Por ejemplo, pueden utilizarse para ofrecer sensores en la actividad, como en este caso.
+/*@ATTRIBUTE@block_name@¿hay botón acá?@*/
 /*@ATTRIBUTE@tooltip@Indica si el Alien está en el mismo lugar que el botón@*/
 function hayBotónAcá() {
-    return(aux_hayBotónAcá())
+    return(aux_hayBotón())
     // Las funciones auxiliares pueden usarse para abstraer la representación.
 }
 
@@ -143,16 +143,13 @@ procedure AuxSacarAlienYMoverAlOesteYPonerAlienAvanzado()
 procedure AuxCompletarPonerAlien() 
   { Poner(Verde) }
 
-// PRECONDICIÓN: está el Botón
+// PRECONDICIÓN: está el Botón sin apretar
 procedure AuxCambiarBotónAOff() 
   { Sacar(Rojo) }
 
-// PRECONDICIÓN: está el Botón
+// PRECONDICIÓN: está el Botón apretado
 procedure AuxCambiarBotónAOn() 
   { Poner(Rojo) }
-
-function aux_hayBotónAcá() 
-  { return(nroBolitas(Rojo) == 2) }
 
 function aux_hayLugarAl(dir) 
   { return(puedeMover(dir)) }
